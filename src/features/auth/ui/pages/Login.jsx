@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+ let navigate = useNavigate();
   return (
     <div className='text-white flex flex-col gap-4'>
       <div className="logo text-center flex flex-col gap-3 mb-7">
@@ -36,7 +38,7 @@ const Login = () => {
 
       <div className='flex flex-col gap-3 items-center'>
         <p className='text-gray-500'>Don't have an account?</p>
-        <h2 className='font-bold cursor-pointer'>Sign up</h2>
+        <h2 onClick={()=>navigate('/register')} className='font-bold cursor-pointer'>Sign up</h2>
       </div>
 
 

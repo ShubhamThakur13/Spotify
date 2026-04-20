@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AuthLayout from '../layouts/AuthLayout'
 import Login from '../../features/auth/ui/pages/Login'
+import Register from '../../features/auth/ui/pages/Register'
 import DashboardLayout from '../layouts/DashboardLayout'
 import HomePage from '../../features/dashboard/ui/pages/HomePage'
 
@@ -14,6 +15,10 @@ const AppRoutes = () => {
                 {
                     path: '',
                     element: <Login/>
+                },
+                {
+                    path: '/register',
+                    element: <Register/>
                 }
             ]
         },
